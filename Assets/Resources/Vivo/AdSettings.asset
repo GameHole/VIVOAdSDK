@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b91716ed29112214e9cdf7eb92af39a1, type: 3}
+  m_Name: AdSettings
+  m_EditorClassIdentifier: 
+  splashId:
+  - 8a8f010319f44df39548642741fcf894
+  bannerId:
+  - 3766cae79fe24dde890230abdf4fc5b2
+  rewardId:
+  - fbf56eb035f1481dafcc6bd62954ab3f
+  interstitialId:
+  - 0f001688d45145da9ed8fdf8f5e24eb5
+  pageDialogId:
+  - 747f550e01eb4b87878264f293bfefe5
+  floatIcon:
+  - 9954870b8b2f4d729ccaffab31241ad7

@@ -1,0 +1,14 @@
+{
+    "name": "AndroidNativeProxy",
+    "references": [
+        "GUID:5b36311bf6883e348939dcfe19fa5601"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": []
+}
