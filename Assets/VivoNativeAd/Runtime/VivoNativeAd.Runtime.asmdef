@@ -1,0 +1,18 @@
+{
+    "name": "VivoNativeAd.Runtime",
+    "references": [
+        "GUID:4d3550b39870a3340acb77ecf9af76ab",
+        "GUID:9eabb7fb16a32a142a87cd461b3444f3",
+        "GUID:01c2d69a03bd6c847bed25d31dee9005",
+        "GUID:5b36311bf6883e348939dcfe19fa5601",
+        "GUID:6c8303478c5e4fb429730cc8ccdbf1f5"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": []
+}

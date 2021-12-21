@@ -1,0 +1,18 @@
+{
+    "name": "VivoNativeAd.Editor",
+    "references": [
+        "GUID:84ffd2ae0c425e941964896fa1a44407",
+        "GUID:d7a326aa56a57784cba5a381e4ae57d4",
+        "GUID:5b36311bf6883e348939dcfe19fa5601"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": []
+}

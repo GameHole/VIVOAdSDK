@@ -1,0 +1,12 @@
+{
+  "name": "com.advertisingsdk.vivo.native",
+  "displayName": "VivoNativeAdSDK",
+  "description": "Vivo原生广告sdk",
+  "version": "1.0.0",
+  "unity": "2018.3",
+  "license": "MIT",
+  "dependencies": {
+    "com.advertisingsdk.vivo": "1.0.0",
+    "com.enred.androidnativehelper": "1.0.0"
+  }
+}
