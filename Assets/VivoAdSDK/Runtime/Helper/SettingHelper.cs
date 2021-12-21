@@ -2,7 +2,7 @@
 using UnityEngine;
 namespace VivoAdSdk
 {
-	public class SettingHelper
+	public partial class SettingHelper
 	{
         private static VivoAdSetting _setting;
         public static VivoAdSetting adsetting

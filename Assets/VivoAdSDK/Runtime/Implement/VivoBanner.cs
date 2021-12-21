@@ -12,7 +12,7 @@ namespace VivoAdSdk
         FrameLayout layout;
         AndroidJavaObject ad;
         AndroidJavaObject view;
-        UnifiedVivoBannerProxy proxy;
+        public UnifiedVivoBannerProxy proxy;
         public Action<int> onClose { get; set; }
         public Action onHide { get; set; }
 
@@ -48,14 +48,20 @@ namespace VivoAdSdk
                 view = v as AndroidJavaObject;
             };
             proxy._onAdShow += onShow;
-            retryer.Regist(this);
+            retryer?.Regist(this);
         }
-
+        AndroidJavaObject CreateAdParams(string id)
+        {
+            var adParams = new AdParams();
+            adParams.positionId = id;
+            adParams.refreshIntervalSeconds = SettingHelper.adsetting.bannerReflshTime;
+            return adParams.ToNative();
+        }
         public void Reload(int id)
         {
             Release();
-            var pama = SettingHelper.CreateAdParams(SettingHelper.adsetting.bannerId[id]);
-            PlatfotmHelper.PostToAndroidUIThread(() =>
+            var pama = CreateAdParams(SettingHelper.adsetting.bannerId[id]);
+            AndroidHelper.PostToAndroidUIThread(() =>
             {
                 ad = new AndroidJavaObject("com.vivo.mobilead.unified.banner.UnifiedVivoBannerAd", ActivityGeter.GetActivity(), pama, proxy);
                 ad.Call("loadAd");

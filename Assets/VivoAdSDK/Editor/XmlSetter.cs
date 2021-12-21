@@ -39,6 +39,7 @@ namespace VivoAdSdk
                 app.AppendChild(doc.CreateActovity("com.vivo.mobilead.video.RewardVideoActivity", "true","true"));
                 app.AppendChild(doc.CreateActovity("com.vivo.mobilead.unified.reward.RewardVideoActivity", "true", "true"));
                 app.AppendChild(doc.CreateActovity("com.vivo.mobilead.unified.interstitial.InterstitialVideoActivity", "true", "true"));
+               
                 var pdr = doc.CreateElement("provider");
                 pdr.CreateAttribute("authorities", "${applicationId}.vivoprovider");
                 pdr.CreateAttribute("name", "com.vivo.mobilead.manager.VivoContentProvider");

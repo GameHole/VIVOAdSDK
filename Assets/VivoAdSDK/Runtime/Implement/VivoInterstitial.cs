@@ -2,6 +2,7 @@
 using UnityEngine;
 using MiniGameSDK;
 using System;
+using AndroidNativeProxy;
 
 namespace VivoAdSdk
 {
@@ -29,7 +30,7 @@ namespace VivoAdSdk
             {
                 onClose?.Invoke(true);
             };
-            retryer.Regist(this);
+            retryer?.Regist(this);
         }
 
         public bool isReady()
@@ -42,7 +43,7 @@ namespace VivoAdSdk
             if (PlatfotmHelper.isEditor()) return;
             ad?.Dispose();
             var pama = SettingHelper.CreateAdParams(Ids[id]);
-            PlatfotmHelper.PostToAndroidUIThread(() =>
+            AndroidHelper.PostToAndroidUIThread(() =>
             {
                 ad = new AndroidJavaObject("com.vivo.mobilead.unified.interstitial.UnifiedVivoInterstitialAd", ActivityGeter.GetActivity(), pama, proxy);
                 ad.Call(loadFuncName);
@@ -51,7 +52,7 @@ namespace VivoAdSdk
        
         public void Show()
         {
-            PlatfotmHelper.PostToAndroidUIThread(() =>
+            AndroidHelper.PostToAndroidUIThread(() =>
             {
                 ShowInternal();
             });

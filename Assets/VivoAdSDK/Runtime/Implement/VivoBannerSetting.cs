@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using AndroidNativeProxy;
+using MiniGameSDK;
+
 namespace VivoAdSdk
 {
     public class VivoBannerSetting : IBannerSetting

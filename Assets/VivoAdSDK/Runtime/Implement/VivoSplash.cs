@@ -2,49 +2,29 @@
 using UnityEngine;
 using MiniGameSDK;
 using System;
+using AndroidNativeProxy;
 
 namespace VivoAdSdk
 {
     public class VivoSplash : ISplashAd,IInitializable
     {
-        class Callback : AndroidJavaProxy
-        {
-            public VivoSplash owener;
-            public Callback() : base("com.vivo.ad.splash.SplashAdListener")
-            {
-            }
-            public void onADDismissed()
-            {
-                Debug.Log("VivoSplash onADDismissed");
-            }
-            public void onNoAD(AndroidJavaObject error)
-            {
-                owener.ad?.Call("close");
-                Debug.Log($"VivoSplash onNoAD code::{error.Call<int>("getErrorCode")} msg::{error.Call<string>("getErrorMsg")}" );
-            }
-            public void onADPresent()
-            {
-                Debug.Log("VivoSplash onADPresent");
-            }
-            public void onADClicked()
-            {
-                Debug.Log("VivoSplash onADClicked");
-            }
-        }
-
-        Callback callback;
-        AndroidJavaObject ad;
+        SplashProxy callback;
+        internal AndroidJavaObject act;
         public Action OnClsoe { get; set; }
         int idx;
         public void Initialize()
         {
-            callback = new Callback() { owener = this };
+            callback = new SplashProxy() { owener = this };
         }
         AndroidJavaObject GetPama(string id)
         {
+            string dir = "ORIENTATION_PORTRAIT";
+            if (Screen.width > Screen.height)
+                dir = "ORIENTATION_LANDSCAPE";
             var bd = new AndroidJavaObject("com.vivo.mobilead.splash.SplashAdParams$Builder", id);
             bd.Call<AndroidJavaObject>("setFetchTimeout", 3000);
             bd.Call<AndroidJavaObject>("setAppTitle", "广告联盟");
+            bd.Call<AndroidJavaObject>("setSplashOrientation",new AndroidJavaClass("com.vivo.mobilead.splash.SplashAdParams").GetStatic<int>(dir));
             return bd.Call<AndroidJavaObject>("build");
         }
         public void Show()
@@ -53,12 +33,16 @@ namespace VivoAdSdk
             var adids = SettingHelper.adsetting.splashId;
             var len = adids.Length;
             AndroidJavaObject pama = GetPama(adids[idx++ % len]);
-            PlatfotmHelper.PostToAndroidUIThread(() =>
+            ActivityHelper.CreateEmpty((act) =>
             {
-                ad = new AndroidJavaObject("com.vivo.mobilead.splash.VivoSplashAd", ActivityGeter.GetActivity(), callback, pama);
-                ad.Call("loadAd");
-                Debug.Log("aa");
+                this.act = act;
+                AndroidHelper.PostToAndroidUIThread(() =>
+                {
+                    act = new AndroidJavaObject("com.vivo.mobilead.splash.VivoSplashAd", this.act, callback, pama);
+                    act.Call("loadAd");
+                });
             });
+           
         }
     }
 }

@@ -12,4 +12,13 @@ namespace VivoAdSdk
             InitSetter.SetJavaFile();
         }
     }
+    [CustomEditor(typeof(VivoAdSetting))]
+    public class VivoAdSettingEditor : Editor
+    {
+        public override void OnInspectorGUI()
+        {
+            base.OnInspectorGUI();
+            InitSetter.SetJavaFile();
+        }
+    }
 }

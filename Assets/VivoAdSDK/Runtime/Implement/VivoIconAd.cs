@@ -1,4 +1,5 @@
-﻿using MiniGameSDK;
+﻿using AndroidNativeProxy;
+using MiniGameSDK;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
@@ -41,7 +42,7 @@ namespace VivoAdSdk
         public void Reload(int id)
         {
             var pama = SettingHelper.CreateAdParams(SettingHelper.adsetting.floatIcon[id]);
-            PlatfotmHelper.PostToAndroidUIThread(() =>
+            AndroidHelper.PostToAndroidUIThread(() =>
             {
                 ad = new AndroidJavaObject("com.vivo.mobilead.unified.icon.UnifiedVivoFloatIconAd", ActivityGeter.GetActivity(), pama, proxy);
                 ad.Call("loadAd");

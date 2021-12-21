@@ -2,6 +2,7 @@
 using UnityEngine;
 using MiniGameSDK;
 using System;
+using AndroidNativeProxy;
 
 namespace VivoAdSdk
 {
@@ -42,7 +43,7 @@ namespace VivoAdSdk
             ad?.Dispose();
             var set = SettingHelper.adsetting.rewardId[id];
             var pama = SettingHelper.CreateAdParams(set);
-            PlatfotmHelper.PostToAndroidUIThread(() =>
+            AndroidHelper.PostToAndroidUIThread(() =>
             {
                  ad = new AndroidJavaObject("com.vivo.mobilead.unified.reward.UnifiedVivoRewardVideoAd", ActivityGeter.GetActivity(), pama, proxy);
                  ad.Call("loadAd");
@@ -54,7 +55,7 @@ namespace VivoAdSdk
             isReward = false;
             if (isReady())
             {
-                PlatfotmHelper.PostToAndroidUIThread(() =>
+                AndroidHelper.PostToAndroidUIThread(() =>
                 {
                     ad.Call("showAd", ActivityGeter.GetActivity());
                 });
