@@ -1,0 +1,14 @@
+{
+  "name": "com.advertisingsdk.vivo.strategy",
+  "displayName": "Vivo Ad Strategy SDK",
+  "description": "Vivo广告策略sdk",
+  "version": "1.0.0",
+  "unity": "2018.3",
+  "license": "MIT",
+  "dependencies": {
+    "com.advertisingsdk.vivo": "1.0.0",
+    "com.advertisingsdk.vivo.native": "1.0.0",
+    "com.advertisingsdk.unin": "1.0.0",
+    "com.advertisingsdk.basic.strategy": "1.0.0"
+  }
+}

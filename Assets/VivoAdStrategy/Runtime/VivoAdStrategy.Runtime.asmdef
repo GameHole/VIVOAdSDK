@@ -1,0 +1,20 @@
+{
+    "name": "VivoAdStrategy.Runtime",
+    "references": [
+        "GUID:6c8303478c5e4fb429730cc8ccdbf1f5",
+        "GUID:4d3550b39870a3340acb77ecf9af76ab",
+        "GUID:9eabb7fb16a32a142a87cd461b3444f3",
+        "GUID:d7a326aa56a57784cba5a381e4ae57d4",
+        "GUID:065e5c9fd4841a04497c30181cdbc075",
+        "GUID:338d56ba68f7cd541a5766eaa370bc68",
+        "GUID:5b36311bf6883e348939dcfe19fa5601"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": []
+}
