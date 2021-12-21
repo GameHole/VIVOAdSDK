@@ -1,0 +1,11 @@
+{
+  "name": "com.advertisingsdk.basic.strategy",
+  "displayName": "AdvertisingSdk.Strategy",
+  "description": "广告策略接口",
+  "version": "1.0.0",
+  "unity": "2018.3",
+  "license": "MIT",
+  "dependencies": {
+    "com.refinter.basic": "1.0.0"
+  }
+}
