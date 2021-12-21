@@ -11,8 +11,8 @@ import com.vivo.mobilead.unified.base.VivoAdError;
 import com.vivo.mobilead.util.VOpenLog;
 
 public class VivoAdInitor implements IOnAppCreate {
-    String mediaID="03ad601d82b64f8e9b4939259b47c26e";
-    boolean isDebug=true;
+    String mediaID="";
+    boolean isDebug=false;
     @Override
     public void onCreate(Application activity) {
         VOpenLog.setEnableLog(isDebug);

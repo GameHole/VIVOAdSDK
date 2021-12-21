@@ -9,8 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ab2f8787c5eb294489224dd38a6fabc9, type: 3}
-  m_Name: Setting
+  m_Script: {fileID: 11500000, guid: 5c73526ab95be4a44b8ab56fb3997c9b, type: 3}
+  m_Name: NativeAdSettings
   m_EditorClassIdentifier: 
-  mediaID: 
-  isDebug: 0
+  bannerAutoChange: 1
+  changeDuration: 20
+  bannerId:
+  - a45047f634d24753911ac976e4fa7ae8
+  pageDialogId:
+  - a45047f634d24753911ac976e4fa7ae8

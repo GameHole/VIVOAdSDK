@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab2f8787c5eb294489224dd38a6fabc9, type: 3}
   m_Name: Setting
   m_EditorClassIdentifier: 
-  mediaID: 
-  isDebug: 0
+  mediaID: 03ad601d82b64f8e9b4939259b47c26e
+  isDebug: 1

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using MiniGameSDK;
+using VivoAdSdk;
 public class Test : MonoBehaviour
 {
     IRewardAdAPI rewardAd;
@@ -12,12 +13,14 @@ public class Test : MonoBehaviour
     IAnalyzeEvent analyze;
     ISplashAd splash;
     IDialogPageAd pageAd;
+    IFloatIconAd icon;
     public Button rwd;
     public Button inter;
     public Button banr;
     public Button banrc;
     public Button sp;
     public Button paged;
+    public Button iconn;
     public Button ana0;
     public Button ana1;
     private void Awake()
@@ -26,6 +29,7 @@ public class Test : MonoBehaviour
     }
     void Start()
     {
+        Debug.Log("banner ad ="+bannerAd);
         paged.onClick.AddListener(() =>
         {
             pageAd.Show();
@@ -33,6 +37,10 @@ public class Test : MonoBehaviour
         sp.onClick.AddListener(()=>
         {
             splash.Show();
+        });
+        iconn.onClick.AddListener(() =>
+        {
+            icon.Show();
         });
         rwd.onClick.AddListener(() =>
         {
@@ -48,6 +56,7 @@ public class Test : MonoBehaviour
         banr.onClick.AddListener(() =>
         {
             bannerAd.Show();
+          
         });
         banrc.onClick.AddListener(() =>
         {

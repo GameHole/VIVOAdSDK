@@ -12,9 +12,10 @@
     }
   ],
   "dependencies": {
-    "com.advertisingsdk.basic": "1.0.0",
-    "com.advertisingsdk.extra": "file:E:/WorkSpace/unityProjects/Gits/AdvertisingSdk/Assets/Extra",
+    "com.advertisingsdk.basic": "file:E:/WorkSpace/unityProjects/Gits/AdvertisingSdk/Assets/Basic",
+    "com.advertisingsdk.unin": "file:E:/WorkSpace/unityProjects/Gits/AdvertisingSdk/Assets/UninSDK",
     "com.enred.androidhelper": "file:E:/WorkSpace/unityProjects/Gits/AndrodBuildHelper/Assets/AndrodBuildHelper",
+    "com.enred.androidnativehelper": "file:E:/WorkSpace/unityProjects/Gits/AndroidNativeProxy/Assets/AndroidNativeProxy",
     "com.unity.collab-proxy": "1.2.16",
     "com.unity.ext.nunit": "1.0.0",
     "com.unity.ide.rider": "1.1.0",
