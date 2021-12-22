@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c73526ab95be4a44b8ab56fb3997c9b, type: 3}
   m_Name: NativeAdSettings
   m_EditorClassIdentifier: 
-  bannerAutoChange: 0
-  changeDuration: 20
-  bannerId: []
-  pageDialogId: []
+  bannerAutoChange: 1
+  changeDuration: 60
+  bannerId:
+  - cd5c88c286fd4a52a27bd93a2eefde91
+  - f7435b57f2aa48dcad1e98d7ab2df7f3
+  pageDialogId:
+  - 0441695140924c20969c4fe33e28e68f
+  - 8b1ef257916e4757b85d7ff44ae81d2f

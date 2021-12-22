@@ -11,7 +11,7 @@ import com.vivo.mobilead.unified.base.VivoAdError;
 import com.vivo.mobilead.util.VOpenLog;
 
 public class VivoAdInitor implements IOnAppCreate {
-    String mediaID="";
+    String mediaID="a8f2a03cb9b64ece93c05214171dd6db";
     boolean isDebug=false;
     @Override
     public void onCreate(Application activity) {

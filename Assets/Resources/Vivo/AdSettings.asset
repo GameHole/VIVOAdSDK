@@ -12,11 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b91716ed29112214e9cdf7eb92af39a1, type: 3}
   m_Name: AdSettings
   m_EditorClassIdentifier: 
-  showSplashOnAppInit: 0
-  bannerReflshTime: 20
-  splashId: []
-  bannerId: []
-  rewardId: []
-  interstitialId: []
-  pageDialogId: []
-  floatIcon: []
+  showSplashOnAppInit: 1
+  bannerReflshTime: 60
+  splashId:
+  - ce2e5586b4b3476ca68bf38cb8d54940
+  - b888c42975114c718da1adfc43df2dff
+  bannerId:
+  - 45c1f6ffc793404597417b048ae85c0d
+  - 153850917bf545198a2d6ea1fd22ee25
+  rewardId:
+  - 2cd1b3c8917b4dd49cde816099b745c0
+  - b0607eb8e79445069f0b12c29c2c8368
+  interstitialId:
+  - bf321b9862eb4a778ca3926ebde1536f
+  - d1a1aba763ab40d7a5ae4e73f0d56c68
+  pageDialogId:
+  - e7ded2f53afd4e52ad64b9a8480cffe2
+  - 2bef955e9ea840c78be05a0d3351e1ce
+  floatIcon:
+  - 2ce8ec8f380c4db9be66b230db8a22d2
