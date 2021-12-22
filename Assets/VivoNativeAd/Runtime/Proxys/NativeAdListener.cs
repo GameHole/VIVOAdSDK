@@ -48,7 +48,7 @@ namespace VivoAdSdk
         public void onNoAD(AndroidJavaObject adError)
         {
             _onError?.Invoke(adError);
-            Debug.LogError($"NativeAd onAdError {adError.Call<string>("toString")}");
+            Log($"NativeAd onAdError {adError.Call<string>("toString")}");
         }
 
         public void onClick(AndroidJavaObject nativeResponse)

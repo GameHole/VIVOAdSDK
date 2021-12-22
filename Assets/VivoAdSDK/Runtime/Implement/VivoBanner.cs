@@ -33,6 +33,7 @@ namespace VivoAdSdk
         {
             ad?.Call("destroy");
             ad?.Dispose();
+            view = null;
         }
         public void Initialize()
         {
@@ -48,6 +49,7 @@ namespace VivoAdSdk
                 view = v as AndroidJavaObject;
             };
             proxy._onAdShow += onShow;
+            setting = Refinter.Reflection.Get<IBannerSetting>();
             retryer?.Regist(this);
         }
         AndroidJavaObject CreateAdParams(string id)
