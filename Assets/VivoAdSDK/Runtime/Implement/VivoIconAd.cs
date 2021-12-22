@@ -22,7 +22,7 @@ namespace VivoAdSdk
         public void Hide()
         {
             ad?.Call("destroy");
-            ad.Dispose();
+            ad?.Dispose();
             retryer.Load(this);
         }
 
