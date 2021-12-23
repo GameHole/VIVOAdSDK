@@ -21,22 +21,28 @@ namespace VivoAdSdk
 
         public void Hide()
         {
-            ad?.Call("destroy");
-            ad?.Dispose();
+            AndroidHelper.PostToAndroidUIThread(() =>
+            {
+                ad?.Call("destroy");
+                ad?.Dispose();
+            });
             retryer.Load(this);
         }
 
         public void Initialize()
         {
             proxy = new UnifiedVivoFloatIconProxy() { reloader = this };
-            proxy._onAdClose += onClose;
+            proxy._onAdClose += () => onClose?.Invoke();
             retryer.Regist(this);
 
         }
 
         public void Show()
         {
-            ad?.Call("showAd", ActivityGeter.GetActivity(), screenPosition.x, screenPosition.y);
+            AndroidHelper.PostToAndroidUIThread(() =>
+            {
+                ad?.Call("showAd", ActivityGeter.GetActivity(), screenPosition.x, screenPosition.y);
+            });
         }
 
         public void Reload(int id)
