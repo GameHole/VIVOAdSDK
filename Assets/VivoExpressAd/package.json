@@ -1,0 +1,12 @@
+{
+  "name": "com.advertisingsdk.vivo.express",
+  "displayName": "Vivo Express Ad SDK",
+  "description": "Vivo模板渲染广告",
+  "version": "1.0.0",
+  "unity": "2018.3",
+  "license": "MIT",
+  "dependencies": {
+    "com.advertisingsdk.vivo": "1.0.0",
+    "com.enred.androidnativehelper": "1.0.0"
+  }
+}
