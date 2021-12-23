@@ -21,6 +21,7 @@ public class Test : MonoBehaviour
     public Button sp;
     public Button paged;
     public Button iconn;
+    public Button iconh;
     public Button ana0;
     public Button ana1;
     private void Awake()
@@ -41,6 +42,10 @@ public class Test : MonoBehaviour
         iconn.onClick.AddListener(() =>
         {
             icon.Show();
+        });
+        iconh.onClick.AddListener(() =>
+        {
+            icon.Hide();
         });
         rwd.onClick.AddListener(() =>
         {
