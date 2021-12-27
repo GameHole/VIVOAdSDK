@@ -53,20 +53,18 @@ namespace VivoAdSdk
             SetExtraInfo(pama);
             AndroidHelper.PostToAndroidUIThread(() =>
             {
-                ad = new AndroidJavaObject("com.vivo.mobilead.unified.nativead.UnifiedVivoNativeExpressAd", ActivityGeter.GetActivity(), pama.ToNative(), listener);
+                ad = new AndroidJavaObject("com.vivo.mobilead.unified.nativead.UnifiedVivoNativeExpressAd", getAct(), pama.ToNative(), listener);
                 ad.Call("loadAd");
             });
         }
+        protected virtual AndroidJavaObject getAct() => ActivityGeter.GetActivity();
         protected virtual void SetExtraInfo(AdParams adParams) { }
         public virtual void Show()
         {
             layout.RemoveAllViews();
             if (view != null)
             {
-                AndroidHelper.PostToAndroidUIThread(() =>
-                {
-                    layout.AddView(view, GetParams());
-                });
+                layout.AddView(view, GetParams());
             }
         }
         protected virtual FrameLayout.LayoutParams GetParams()

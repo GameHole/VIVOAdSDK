@@ -12,7 +12,7 @@ namespace VivoAdSdk
         protected override string[] Ids => setting.pageDialogId;
 
         public event Action<bool> onClose;
-
+        AndroidJavaObject act;
         public bool isReady()
         {
             return view != null;
@@ -20,7 +20,21 @@ namespace VivoAdSdk
         public override void Initialize()
         {
             base.Initialize();
-            listener._onClose += (v) => onClose?.Invoke(true);
+            listener._onClose += (v) =>
+            {
+                onClose?.Invoke(true);
+                act?.Call("finish");
+            };
+        }
+        public override void Show()
+        {
+            layout = new FrameLayout();
+            ActivityHelper.CreateEmpty((v) =>
+            {
+                act = v;
+                layout.AddToContentView(v, new FrameLayout.LayoutParams(WHParams.MATCH_PARENT, WHParams.MATCH_PARENT));
+                base.Show();
+            });
         }
     }
 }
